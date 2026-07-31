@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>The Magician's Path — Founders Membership</title>
+<title>The Enchiridion — Founders Channel</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;600;700&family=EB+Garamond:ital,wght@0,400;0,500;0,600;1,400&display=swap" rel="stylesheet">
@@ -17,23 +17,23 @@
     --border: rgba(195,166,172,0.18); --shadow: 0 16px 40px rgba(0,0,0,0.45);
   }
   *{ box-sizing:border-box; }
-  body{ margin:0; background:var(--bg-deep); color:var(--text); font-family:'EB Garamond', serif; font-size:18px; font-weight:500; line-height:1.65; -webkit-font-smoothing:antialiased; }
+  body{ margin:0; background:var(--bg-deep); color:var(--text); font-family:'EB Garamond', serif; font-size:19px; font-weight:500; line-height:1.7; -webkit-font-smoothing:antialiased; }
   h1,h2,h3{ font-family:'Cinzel', serif; margin:0; color:var(--text); font-weight:600; }
   .eyebrow{ font-family:'Cinzel', serif; letter-spacing:0.28em; text-transform:uppercase; font-size:0.72rem; color:var(--teal-bright); font-weight:600; }
-  .container{ max-width:680px; margin:0 auto; padding:0 6vw; }
+  .container{ max-width:640px; margin:0 auto; padding:0 6vw; }
 
   .glitter-container{ position:relative; overflow:hidden; }
   .glitter-dot{ position:absolute; border-radius:50%; opacity:0; pointer-events:none; animation-name:glitter-twinkle; animation-iteration-count:infinite; animation-timing-function:ease-in-out; }
   @keyframes glitter-twinkle{ 0%,100%{ opacity:0; transform:scale(0.4);} 50%{ opacity:1; transform:scale(1.3);} }
 
-  .hero{ min-height:70svh; display:flex; flex-direction:column; align-items:center; justify-content:center; text-align:center; padding:9vh 6vw 6vh;
+  .hero{ min-height:76svh; display:flex; flex-direction:column; align-items:center; justify-content:center; text-align:center; padding:9vh 6vw 6vh;
     background: radial-gradient(ellipse at 50% 0%, rgba(110,31,47,0.5), transparent 55%), var(--bg-deep); }
-  .hero h1{ font-size:clamp(2rem, 5.5vw, 3.2rem); letter-spacing:0.02em; line-height:1.15; margin:0.6rem 0 1rem; }
-  .hero .sub{ max-width:34em; font-size:1.15rem; color:var(--text-soft); font-style:italic; margin-bottom:1.6rem; }
-  .founders-tag{ font-family:'Cinzel', serif; font-size:0.95rem; letter-spacing:0.12em; text-transform:uppercase; color:var(--diamond); opacity:0.85; margin-top:0.35rem; }
+  .hero h1{ font-size:clamp(1.9rem, 5.2vw, 2.9rem); letter-spacing:0.01em; line-height:1.2; margin:0.8rem 0 1.1rem; }
+  .hero .sub{ max-width:32em; font-size:1.15rem; color:var(--text-soft); font-style:italic; margin-bottom:1.6rem; }
+  .founders-tag{ font-family:'Cinzel', serif; font-size:0.95rem; letter-spacing:0.1em; text-transform:uppercase; color:var(--diamond); opacity:0.85; margin-top:0.35rem; }
 
-  .price-line{ font-family:'Cinzel', serif; font-size:2.2rem; color:var(--teal-bright); margin:1.4rem 0 0.3rem; }
-  .price-line span{ display:block; font-size:1.05rem; font-family:'Cinzel',serif; font-style:normal; font-weight:700; letter-spacing:0.04em; color:var(--primary-bright); margin-top:0.5rem; }
+  .price-line{ font-family:'Cinzel', serif; font-size:2.1rem; color:var(--teal-bright); margin:1.4rem 0 0.3rem; }
+  .price-line span{ display:block; font-size:1rem; font-family:'Cinzel',serif; font-weight:700; letter-spacing:0.04em; color:var(--primary-bright); margin-top:0.5rem; }
 
   .cta-btn{ position:relative; overflow:hidden; display:inline-block; padding:1.05em 2.6em;
     background:linear-gradient(135deg, var(--primary-deep), var(--primary-bright)); color:#03110f; text-decoration:none; border-radius:2px;
@@ -43,9 +43,16 @@
   @keyframes shimmer{ 0%{left:-60%;} 50%{left:130%;} 100%{left:130%;} }
   .cta-btn:hover{ filter:brightness(1.1); }
 
-  .section{ padding:6vh 0; }
-  .section p{ font-size:1.1rem; color:var(--text-soft); margin:0 0 1.1em; }
+  .section{ padding:5.5vh 0; }
+  .section p{ font-size:1.12rem; color:var(--text); margin:0 0 1.2em; }
   .divider{ text-align:center; color:var(--teal-bright); letter-spacing:0.5em; margin:1rem 0 3rem; font-size:0.85rem; }
+
+  .lede{ font-size:1.3rem; font-style:italic; color:var(--diamond); text-align:center; margin-bottom:1.6em; line-height:1.6; }
+
+  .pull-quote{ text-align:center; font-family:'Cinzel',serif; font-size:1.5rem; color:var(--primary-bright); line-height:1.4;
+    padding:1.6rem 0; margin:1.5rem 0; border-top:1px solid var(--border); border-bottom:1px solid var(--border); }
+
+  .video-para{ background:var(--bg-panel); border-left:3px solid var(--teal-bright); padding:1.4rem 1.6rem; border-radius:2px; margin:1.6em 0; font-style:italic; color:var(--text-soft); }
 
   .steps{ display:flex; flex-direction:column; gap:1.2rem; }
   .step-card{ background:var(--bg-panel); border:1px solid var(--border); border-radius:3px; padding:1.4rem 1.6rem; }
@@ -58,10 +65,18 @@
   .founder-block li::before{ content:"◆"; position:absolute; left:0; color:var(--teal-bright); font-size:0.8em; }
   .founder-block ul{ list-style:none; padding:0; margin:0; }
 
+  .faq-card{ border-bottom:1px solid var(--border); padding:1.3rem 0; }
+  .faq-card:last-child{ border-bottom:none; }
+  .faq-q{ font-family:'Cinzel', serif; font-size:0.95rem; color:var(--teal-bright); margin-bottom:0.5em; }
+  .faq-a{ font-size:1rem; color:var(--text-soft); margin:0; }
+
   .cap-note{ text-align:center; font-family:'Cinzel', serif; font-size:0.85rem; letter-spacing:0.1em; color:var(--primary-bright); margin-top:2.2rem; }
 
-  .final-cta{ text-align:center; padding:8vh 6vw 10vh; }
+  .final-cta{ text-align:center; padding:7vh 6vw 6vh; }
   .final-cta h2{ font-size:clamp(1.5rem, 3.8vw, 2rem); margin-bottom:1.2rem; }
+
+  .ps{ max-width:640px; margin:0 auto; padding:0 6vw 8vh; font-size:1.05rem; color:var(--text-soft); border-top:1px dashed var(--border); padding-top:2rem; }
+  .ps strong{ color:var(--primary-bright); }
 
   footer{ text-align:center; padding:4vh 6vw 6vh; font-family:'Cinzel', serif; font-size:0.68rem; letter-spacing:0.14em; text-transform:uppercase; color:var(--text-soft); opacity:0.7; }
 
@@ -70,32 +85,50 @@
 </head>
 <body>
 
+  <!-- HOOK -->
   <section class="hero glitter-container">
     <div class="eyebrow">The Magician's Path</div>
-    <h1>The Enchiridion</h1>
-    <p class="sub">The Magician's library of esoteric knowledge. Growing indefinitely.</p>
-    <div class="founders-tag">Founders Membership — First 100 Only</div>
-    <div class="price-line">$33/month<span>Price-locked forever for the first 100 founders</span></div>
+    <h1>Some Of What This Library<br>Will Contain —<br>You Are Not Supposed To See.</h1>
+    <p class="sub">A monthly membership: an ever-growing library of esoteric knowledge, a weekly live call, and a private community of people serious about ascending — with a direct line to me.</p>
+    <div class="founders-tag">Founders Channel — Only 33 Spots</div>
+    <div class="price-line">$88/month<span>A direct line to me. Not a bot. Not a bounce-back. Me.</span></div>
     <a href="https://buy.stripe.com/5kQ3cv8Hg9Fe51xcJydAk00" class="cta-btn">Claim a Founding Spot</a>
-    <div class="cap-note">Only 100 founding spots available</div>
-    <div style="margin-top:1.6rem; padding:1em 1.8em; border:1.5px solid var(--primary-bright); border-radius:4px; background:rgba(45,212,191,0.07);">
-      <div style="font-family:'Cinzel',serif; font-size:1rem; letter-spacing:0.08em; text-transform:uppercase; color:var(--primary-bright); font-weight:700;">
-        Live Group Call &amp; Initial Library Launch
-      </div>
-      <div style="font-family:'Cinzel',serif; font-size:1.6rem; color:var(--diamond); margin-top:0.3rem; font-weight:700;">
-        August 8th
-      </div>
-    </div>
+    <div class="cap-note">Only 33 founding spots available</div>
   </section>
 
-  <div class="container" style="padding:3vh 6vw;">
-    <p style="text-align:center; font-style:italic; color:var(--text); font-weight:400; font-size:1.1rem; line-height:1.85; max-width:36em; margin:0 auto;">
-      This isn't a side project — it's what I do, permanently. From day one, you get real breakdowns, real practices,
-      and a live community of people serious about ascending. And because <strong style="color:var(--primary-bright); font-weight:700;">this library never stops growing</strong>,
-      every month you're in, it only gets bigger — <strong style="color:var(--primary-bright); font-weight:700;">without ever costing you more</strong>.
-    </p>
+  <!-- ENTER THE CONVERSATION ALREADY IN THEIR HEAD -->
+  <div class="container section">
+    <p class="lede">You already know the version of yourself that's supposed to exist.</p>
+    <p>The one who isn't scared of being seen. Who doesn't perform for rooms that were never built for them. Who moves through life already knowing what most people spend decades searching for.</p>
+    <p>You've felt it in fragments — a synchronicity here, a moment of unshakeable clarity there. Then it fades, and you go back to waiting.</p>
+    <p>Here's the thing nobody tells you: you're not waiting for permission. You're waiting for the knowledge that turns those fragments into something you can actually use, on command, for the rest of your life.</p>
   </div>
 
+  <div class="divider">◆ ✧ ◆</div>
+
+  <!-- THE COMMUNITY / PURPOSE, straight from the actual video script -->
+  <div class="container section">
+    <div class="video-para">
+      "But most importantly, this is an inside community of spiritual rockstars who are serious about ascending in this lifetime and bringing God's kingdom into existence. You'll meet some of the most interesting people on earth inside The Enchiridion."
+    </div>
+    <p class="pull-quote">I'm one of the greatest esoteric practitioners there will ever be.</p>
+    <p>I'll host The Enchiridion on Discord, since it's simple to use and navigate — chat rooms, forums, and resource sharing between members, all in one place. And once a week, I host a group meeting where I cover one esoteric topic in depth, live, and you can ask questions in real time.</p>
+  </div>
+
+  <div class="divider">◆ ✧ ◆</div>
+
+  <!-- THE BIG IDEA -->
+  <div class="container section">
+    <div class="video-para">
+      "This is a living, breathing library of esoteric knowledge and tools to help you ascend spiritually. From Kabbalah, to the Bible, to tarot, to the Tetragrammaton and Solomonic magic, curses of the soul, or cautionary tales of your favorite icons and artists — day to day, week to week, I break down the secret knowledge and describe how to use it for your God-given purpose."
+    </div>
+    <p>This isn't a course that sits still once you buy it. It's a library that's alive — growing every single day, for as long as I'm alive to build it. And I'm not adding to it as a side project. This is what I do, permanently.</p>
+    <p>Over the next 1, 2, 3, even 10 years, as it expands — some of what it will contain, you are not supposed to see.</p>
+  </div>
+
+  <div class="divider">◆ ✧ ◆</div>
+
+  <!-- WHAT'S INSIDE -->
   <div class="container section">
     <div class="eyebrow" style="text-align:center; display:block; margin-bottom:1.2rem;">What's Inside</div>
     <div class="steps">
@@ -106,7 +139,7 @@
       </div>
       <div class="step-card">
         <span class="num">Two</span>
-        <h3>Occult & Tradition Breakdowns</h3>
+        <h3>Occult &amp; Tradition Breakdowns</h3>
         <p>Esoteric traditions, rituals, and diagrams — mapped back to the Magician's Path framework, not taught in isolation.</p>
       </div>
       <div class="step-card">
@@ -129,24 +162,64 @@
 
   <div class="divider">◆ ✧ ◆</div>
 
+  <!-- WHY IT COSTS WHAT IT COSTS -->
+  <div class="container section">
+    <p>I'll be straight with you: this isn't a mass-market offer. It's niche, and it's high-impact — the more you invest, the more you'll actually get out of it. I'd rather have fewer people who are deeply in this than a crowd that never shows up.</p>
+    <p>This isn't a side project — it's what I do, permanently. From day one, you get real breakdowns, real practices, and a live community of people serious about ascending. And because <strong style="color:var(--primary-bright);">this library never stops growing</strong>, every month you're in, it only gets bigger — <strong style="color:var(--primary-bright);">without ever costing you more</strong>.</p>
+  </div>
+
+  <div class="divider">◆ ✧ ◆</div>
+
+  <!-- FOUNDERS OFFER -->
   <div class="container section">
     <div class="eyebrow" style="text-align:center; display:block; margin-bottom:1.2rem;">Founders Get</div>
     <div class="founder-block">
       <ul>
-        <li><strong>Price locked forever.</strong> $33/month, even after the library's built out and new members pay more.</li>
-        <li><strong>A say in what's built first.</strong> One breakdown is added per day — founders help decide what comes next.</li>
+        <li><strong>The Founders Channel.</strong> A dedicated channel with direct access to me — not lost in the general server.</li>
+        <li><strong>A say in what's built first.</strong> One breakdown is added per day — founders help decide what comes next, and requested breakdowns get credited: "Requested by [Founder Name]."</li>
+        <li><strong>First access, always.</strong> Founders see every new breakdown 24-48 hours before anyone who joins later.</li>
         <li><strong>Everything added, forever, included.</strong> As the library grows, founders never pay extra for it.</li>
+        <li><strong>A real Founding Member badge</strong>, visibly marked in the community.</li>
+        <li><strong>Grandfathered into whatever comes next.</strong> If something's built above this tier later, founders never end up last in line.</li>
         <li><strong>Immediate access to the private Discord</strong> the moment you join.</li>
-        <li><strong>The first live group call is August 8th</strong> — while the 100 founding spots are still filling, so it's founders-only by default. Join now and you're there from day one.</li>
-        <li><strong>Founding Member status</strong>, visibly marked in the community.</li>
+        <li><strong>The first live group call is August 8th</strong> — while the 33 founding spots are still filling, so it's founders-only by default. Join now and you're there from day one.</li>
       </ul>
     </div>
   </div>
 
+  <div class="divider">◆ ✧ ◆</div>
+
+  <!-- OBJECTIONS -->
+  <div class="container section">
+    <div class="eyebrow" style="text-align:center; display:block; margin-bottom:0.4rem;">Before You Ask</div>
+    <div class="faq-card">
+      <p class="faq-q">Is this therapy or a clinical treatment?</p>
+      <p class="faq-a">No. This is education and community — teaching, breakdowns, and live discussion. I'm not a therapist and this isn't a substitute for medical or mental health care. If you need that, get it alongside this, not instead of it.</p>
+    </div>
+    <div class="faq-card">
+      <p class="faq-q">Do I need to already know this stuff?</p>
+      <p class="faq-a">No. Every breakdown is built to teach the concept from the ground up before going deep. You don't need a background in the esoteric to follow along — you just need to actually show up.</p>
+    </div>
+    <div class="faq-card">
+      <p class="faq-q">What if I miss a live call?</p>
+      <p class="faq-a">Every call is recorded and added to the library, forever. You never lose access to it.</p>
+    </div>
+    <div class="faq-card">
+      <p class="faq-q">I've never done anything like this before.</p>
+      <p class="faq-a">Then that's exactly why it's time to. Everything else hasn't worked — or you wouldn't still be reading this. And if you've made it this far, some part of you already knows this is the thing to try.</p>
+    </div>
+  </div>
+
+  <!-- CLOSE -->
   <div class="final-cta glitter-container">
-    <h2>The Library Grows<br>Every Single Day.</h2>
+    <h2>I Love You.<br>I'll See You On The Inside.</h2>
     <a href="https://buy.stripe.com/5kQ3cv8Hg9Fe51xcJydAk00" class="cta-btn" style="margin-top:0.6rem;">Claim a Founding Spot</a>
-    <div class="cap-note">Only 100 founding spots available</div>
+    <div class="cap-note">Only 33 founding spots available</div>
+    <p style="margin-top:2rem; font-style:italic; color:var(--text-soft); max-width:32em; margin-left:auto; margin-right:auto;">Thanks for being here.</p>
+  </div>
+
+  <div class="ps">
+    <strong>P.S.</strong> — There are only 33 of these spots. Not one more. This isn't a quick money scheme for me — I'm one of the great esoteric practitioners of this era, and this library is permanent work. Once these 33 are gone, this exact access, this exact price, and a direct channel to me disappears with them.
   </div>
 
   <footer>◆ The Magician's Path ◆</footer>
@@ -174,6 +247,9 @@
   document.querySelectorAll('.glitter-container').forEach(function(el){ addGlitter(el, 45); });
 })();
 </script>
+
+</body>
+</html>
 
 </body>
 </html>
