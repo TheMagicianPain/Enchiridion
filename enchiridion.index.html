@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>The Magician's Path — Founders Membership</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;600;700&family=EB+Garamond:ital,wght@0,400;0,500;0,600;1,400&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --bg-deep:#0d0509; --bg-panel:#201019; --bg-panel-2:#2a1420;
+    --maroon:#7a2138; --maroon-bright:#b8334f;
+    --teal:#1d6b6b; --teal-bright:#4dd8cc;
+    --primary-deep:#0a3d38; --primary-bright:#2dd4bf;
+    --diamond:#f5f6fa; --text:#f2e8ea; --text-soft:#dcc3c9;
+    --border: rgba(195,166,172,0.18); --shadow: 0 16px 40px rgba(0,0,0,0.45);
+  }
+  *{ box-sizing:border-box; }
+  body{ margin:0; background:var(--bg-deep); color:var(--text); font-family:'EB Garamond', serif; font-size:18px; font-weight:500; line-height:1.65; -webkit-font-smoothing:antialiased; }
+  h1,h2,h3{ font-family:'Cinzel', serif; margin:0; color:var(--text); font-weight:600; }
+  .eyebrow{ font-family:'Cinzel', serif; letter-spacing:0.28em; text-transform:uppercase; font-size:0.72rem; color:var(--teal-bright); font-weight:600; }
+  .container{ max-width:680px; margin:0 auto; padding:0 6vw; }
+
+  .glitter-container{ position:relative; overflow:hidden; }
+  .glitter-dot{ position:absolute; border-radius:50%; opacity:0; pointer-events:none; animation-name:glitter-twinkle; animation-iteration-count:infinite; animation-timing-function:ease-in-out; }
+  @keyframes glitter-twinkle{ 0%,100%{ opacity:0; transform:scale(0.4);} 50%{ opacity:1; transform:scale(1.3);} }
+
+  .hero{ min-height:70svh; display:flex; flex-direction:column; align-items:center; justify-content:center; text-align:center; padding:9vh 6vw 6vh;
+    background: radial-gradient(ellipse at 50% 0%, rgba(110,31,47,0.5), transparent 55%), var(--bg-deep); }
+  .hero h1{ font-size:clamp(2rem, 5.5vw, 3.2rem); letter-spacing:0.02em; line-height:1.15; margin:0.6rem 0 1rem; }
+  .hero .sub{ max-width:34em; font-size:1.15rem; color:var(--text-soft); font-style:italic; margin-bottom:1.6rem; }
+  .founders-tag{ font-family:'Cinzel', serif; font-size:0.95rem; letter-spacing:0.12em; text-transform:uppercase; color:var(--diamond); opacity:0.85; margin-top:0.35rem; }
+
+  .price-line{ font-family:'Cinzel', serif; font-size:2.2rem; color:var(--teal-bright); margin:1.4rem 0 0.3rem; }
+  .price-line span{ display:block; font-size:1.05rem; font-family:'Cinzel',serif; font-style:normal; font-weight:700; letter-spacing:0.04em; color:var(--primary-bright); margin-top:0.5rem; }
+
+  .cta-btn{ position:relative; overflow:hidden; display:inline-block; padding:1.05em 2.6em;
+    background:linear-gradient(135deg, var(--primary-deep), var(--primary-bright)); color:#03110f; text-decoration:none; border-radius:2px;
+    font-family:'Cinzel', serif; font-weight:700; font-size:0.9rem; letter-spacing:0.14em; text-transform:uppercase; box-shadow:var(--shadow); border:1px solid rgba(238,240,244,0.15); text-shadow:0 1px 0 rgba(255,255,255,0.15); }
+  .cta-btn::after{ content:""; position:absolute; top:0; left:-60%; width:40%; height:100%;
+    background:linear-gradient(120deg, transparent, rgba(238,240,244,0.35), transparent); transform:skewX(-20deg); animation:shimmer 3.2s ease-in-out infinite; }
+  @keyframes shimmer{ 0%{left:-60%;} 50%{left:130%;} 100%{left:130%;} }
+  .cta-btn:hover{ filter:brightness(1.1); }
+
+  .section{ padding:6vh 0; }
+  .section p{ font-size:1.1rem; color:var(--text-soft); margin:0 0 1.1em; }
+  .divider{ text-align:center; color:var(--teal-bright); letter-spacing:0.5em; margin:1rem 0 3rem; font-size:0.85rem; }
+
+  .steps{ display:flex; flex-direction:column; gap:1.2rem; }
+  .step-card{ background:var(--bg-panel); border:1px solid var(--border); border-radius:3px; padding:1.4rem 1.6rem; }
+  .step-card .num{ font-family:'Cinzel', serif; color:var(--teal-bright); font-size:0.72rem; letter-spacing:0.14em; text-transform:uppercase; display:block; margin-bottom:0.4em; }
+  .step-card h3{ font-size:1.1rem; margin-bottom:0.4em; color:var(--diamond); }
+  .step-card p{ margin:0; font-size:1rem; color:var(--text-soft); }
+
+  .founder-block{ background:var(--bg-panel-2); border:1px solid var(--border); border-radius:4px; padding:2.2rem 2rem; }
+  .founder-block li{ font-size:1.05rem; color:var(--text); margin-bottom:1em; padding-left:1.6em; position:relative; }
+  .founder-block li::before{ content:"◆"; position:absolute; left:0; color:var(--teal-bright); font-size:0.8em; }
+  .founder-block ul{ list-style:none; padding:0; margin:0; }
+
+  .cap-note{ text-align:center; font-family:'Cinzel', serif; font-size:0.85rem; letter-spacing:0.1em; color:var(--primary-bright); margin-top:2.2rem; }
+
+  .final-cta{ text-align:center; padding:8vh 6vw 10vh; }
+  .final-cta h2{ font-size:clamp(1.5rem, 3.8vw, 2rem); margin-bottom:1.2rem; }
+
+  footer{ text-align:center; padding:4vh 6vw 6vh; font-family:'Cinzel', serif; font-size:0.68rem; letter-spacing:0.14em; text-transform:uppercase; color:var(--text-soft); opacity:0.7; }
+
+  @media (max-width:520px){ .founder-block{ padding:1.6rem 1.2rem; } }
+</style>
+</head>
+<body>
+
+  <section class="hero glitter-container">
+    <div class="eyebrow">The Magician's Path</div>
+    <h1>The Enchiridion</h1>
+    <p class="sub">The Magician's library of esoteric knowledge. Growing indefinitely.</p>
+    <div class="founders-tag">Founders Membership — First 100 Only</div>
+    <div class="price-line">$33/month<span>Price-locked forever for the first 100 founders</span></div>
+    <a href="https://buy.stripe.com/5kQ3cv8Hg9Fe51xcJydAk00" class="cta-btn">Claim a Founding Spot</a>
+    <div class="cap-note">Only 100 founding spots available</div>
+    <div style="margin-top:1.6rem; padding:1em 1.8em; border:1.5px solid var(--primary-bright); border-radius:4px; background:rgba(45,212,191,0.07);">
+      <div style="font-family:'Cinzel',serif; font-size:1rem; letter-spacing:0.08em; text-transform:uppercase; color:var(--primary-bright); font-weight:700;">
+        Live Group Call &amp; Initial Library Launch
+      </div>
+      <div style="font-family:'Cinzel',serif; font-size:1.6rem; color:var(--diamond); margin-top:0.3rem; font-weight:700;">
+        August 8th
+      </div>
+    </div>
+  </section>
+
+  <div class="container" style="padding:3vh 6vw;">
+    <p style="text-align:center; font-style:italic; color:var(--text); font-weight:400; font-size:1.1rem; line-height:1.85; max-width:36em; margin:0 auto;">
+      This isn't a side project — it's what I do, permanently. From day one, you get real breakdowns, real practices,
+      and a live community of people serious about ascending. And because <strong style="color:var(--primary-bright); font-weight:700;">this library never stops growing</strong>,
+      every month you're in, it only gets bigger — <strong style="color:var(--primary-bright); font-weight:700;">without ever costing you more</strong>.
+    </p>
+  </div>
+
+  <div class="container section">
+    <div class="eyebrow" style="text-align:center; display:block; margin-bottom:1.2rem;">What's Inside</div>
+    <div class="steps">
+      <div class="step-card">
+        <span class="num">One</span>
+        <h3>Artist Breakdowns</h3>
+        <p>Breakdowns of the actual occult tactics famous artists have used to gain their power and influence — the full mechanism, not the reel-length teaser.</p>
+      </div>
+      <div class="step-card">
+        <span class="num">Two</span>
+        <h3>Occult & Tradition Breakdowns</h3>
+        <p>Esoteric traditions, rituals, and diagrams — mapped back to the Magician's Path framework, not taught in isolation.</p>
+      </div>
+      <div class="step-card">
+        <span class="num">Three</span>
+        <h3>The 7 Curses, Fully Broken Down</h3>
+        <p>Each Curse gets its own deep breakdown, paired with a real exercise — teaching and practice, together.</p>
+      </div>
+      <div class="step-card">
+        <span class="num">Four</span>
+        <h3>Weekly Live Group Call</h3>
+        <p>Each week, we go deep on one thing — an esoteric practice, a Curse, or an artist's occult tactics. Live discussion, not a lecture. Every call is recorded and kept in the library — forever.</p>
+      </div>
+      <div class="step-card">
+        <span class="num">Five</span>
+        <h3>A Real Community</h3>
+        <p>Share ideas, trade resources, and connect with other serious practitioners — the same people you'll see live on the weekly call. Some of the most interesting people on earth are already inside.</p>
+      </div>
+    </div>
+  </div>
+
+  <div class="divider">◆ ✧ ◆</div>
+
+  <div class="container section">
+    <div class="eyebrow" style="text-align:center; display:block; margin-bottom:1.2rem;">Founders Get</div>
+    <div class="founder-block">
+      <ul>
+        <li><strong>Price locked forever.</strong> $33/month, even after the library's built out and new members pay more.</li>
+        <li><strong>A say in what's built first.</strong> One breakdown is added per day — founders help decide what comes next.</li>
+        <li><strong>Everything added, forever, included.</strong> As the library grows, founders never pay extra for it.</li>
+        <li><strong>Immediate access to the private Discord</strong> the moment you join.</li>
+        <li><strong>The first live group call is August 8th</strong> — while the 100 founding spots are still filling, so it's founders-only by default. Join now and you're there from day one.</li>
+        <li><strong>Founding Member status</strong>, visibly marked in the community.</li>
+      </ul>
+    </div>
+  </div>
+
+  <div class="final-cta glitter-container">
+    <h2>The Library Grows<br>Every Single Day.</h2>
+    <a href="https://buy.stripe.com/5kQ3cv8Hg9Fe51xcJydAk00" class="cta-btn" style="margin-top:0.6rem;">Claim a Founding Spot</a>
+    <div class="cap-note">Only 100 founding spots available</div>
+  </div>
+
+  <footer>◆ The Magician's Path ◆</footer>
+
+<script>
+(function(){
+  const colors = ['#eef0f4', '#4dd8cc', '#2dd4bf'];
+  function addGlitter(container, count){
+    for(let i = 0; i < count; i++){
+      const dot = document.createElement('div');
+      dot.className = 'glitter-dot';
+      const size = (Math.random() * 2.2 + 0.8).toFixed(1);
+      const color = colors[Math.floor(Math.random() * colors.length)];
+      dot.style.left = (Math.random() * 100).toFixed(1) + '%';
+      dot.style.top = (Math.random() * 100).toFixed(1) + '%';
+      dot.style.width = size + 'px';
+      dot.style.height = size + 'px';
+      dot.style.background = color;
+      dot.style.boxShadow = '0 0 ' + (size * 2.5).toFixed(1) + 'px ' + color;
+      dot.style.animationDelay = (Math.random() * 4).toFixed(2) + 's';
+      dot.style.animationDuration = (Math.random() * 2.5 + 1.5).toFixed(2) + 's';
+      container.appendChild(dot);
+    }
+  }
+  document.querySelectorAll('.glitter-container').forEach(function(el){ addGlitter(el, 45); });
+})();
+</script>
+
+</body>
+</html>
