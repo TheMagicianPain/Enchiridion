@@ -6,23 +6,25 @@
 <title>The Magician's Path — Community</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;600;700&family=EB+Garamond:ital,wght@0,400;0,500;0,600;1,400;1,600&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;600;700&family=EB+Garamond:ital,wght@0,400;0,500;0,600;1,400;1,600&family=Archivo:wght@600;700;800;900&display=swap" rel="stylesheet">
 <style>
   :root{
-    --bg-deep:#f4e8d0; --bg-panel:#3d2610; --bg-panel-2:#4e3013;
+    --bg-deep:#f4e8d0; --bg-panel:#0a332e; --bg-panel-2:#0d3d37;
     --maroon:#8a5a2e; --maroon-bright:#d9a44e;
     --teal:#1d6b6b; --teal-bright:#4dd8cc;
-    --primary-deep:#0a3d38; --primary-bright:#2dd4bf;
+    --primary-deep:#073d38; --primary-bright:#06d6c4;
     --diamond:#f5f6fa; --text:#f2ece2; --text-soft:#d9c7ab;
     --ink:#2c1c0d; --ink-soft:#6b4a28; --accent-onlight:#0e6b60;
-    --border: rgba(238,224,196,0.14); --border-onlight: rgba(60,40,20,0.22);
-    --shadow: 0 14px 30px rgba(60,40,15,0.16);
-    --glass-bg: rgba(78,48,19,0.55); --glass-border: rgba(255,255,255,0.09);
+    --silver:#334049; --silver-bright:#dbe2e8;
+    --border: rgba(238,224,196,0.14); --border-onlight: rgba(30,50,45,0.22);
+    --shadow: 0 14px 30px rgba(10,40,35,0.18);
+    --glass-bg: rgba(13,61,55,0.55); --glass-border: rgba(255,255,255,0.1);
     --r-lg: 22px; --r-md: 16px; --r-sm: 12px; --r-pill: 999px;
   }
   *{ box-sizing:border-box; -webkit-tap-highlight-color:transparent; }
-  body{ margin:0; background:var(--bg-deep); color:var(--ink); font-family:'EB Garamond', serif; font-size:19px; font-weight:500; line-height:1.7; -webkit-font-smoothing:antialiased; position:relative; }
-  h1,h2,h3{ font-family:'Cinzel', serif; margin:0; color:var(--ink); font-weight:600; }
+  body{ margin:0; background:var(--bg-deep); color:var(--ink); font-family:'Archivo', sans-serif; font-size:22px; font-weight:700; line-height:1.5; -webkit-font-smoothing:antialiased; position:relative; }
+  h1,h3{ font-family:'Cinzel', serif; margin:0; color:var(--ink); font-weight:700; }
+  h2{ font-family:'Archivo', sans-serif; margin:0; color:var(--ink); font-weight:900; letter-spacing:-0.01em; }
   .eyebrow{ font-family:'Cinzel', serif; letter-spacing:0.28em; text-transform:uppercase; font-size:0.72rem; color:var(--accent-onlight); font-weight:600; }
   .container{ max-width:640px; margin:0 auto; padding:0 6vw; }
 
@@ -41,15 +43,15 @@
   .hero{ min-height:76svh; display:flex; flex-direction:column; align-items:center; justify-content:center; text-align:center; padding:9vh 6vw 6vh;
     background: radial-gradient(ellipse at 50% 0%, rgba(217,164,78,0.22), transparent 55%), var(--bg-deep); }
   .hero h1{ font-size:clamp(1.9rem, 5.2vw, 2.9rem); letter-spacing:0.01em; line-height:1.2; margin:0.8rem 0 1.1rem; font-weight:700; -webkit-text-stroke:0.5px var(--ink); }
-  .hero .sub{ max-width:32em; font-size:1.15rem; color:var(--ink); font-weight:600; font-style:italic; margin-bottom:1.6rem; }
+  .hero .sub{ max-width:32em; font-size:1.5rem; color:var(--ink); font-weight:800; margin-bottom:1.6rem; }
   .founders-tag{ font-family:'Cinzel', serif; font-size:0.95rem; letter-spacing:0.1em; text-transform:uppercase; color:var(--accent-onlight); opacity:0.9; margin-top:0.35rem; font-weight:700; }
 
   .glitter-container :is(h1,h2,p,.sub,.founders-tag,.price-line,.price-line span,.eyebrow,.cap-note){
     text-shadow: 0 0 20px rgba(244,232,208,1), 0 0 10px rgba(244,232,208,1), 0 0 4px rgba(244,232,208,1), 0 1px 0 rgba(244,232,208,0.9);
   }
 
-  .price-line{ font-family:'Cinzel', serif; font-size:2.1rem; color:var(--accent-onlight); margin:1.4rem 0 0.3rem; }
-  .price-line span{ display:block; font-size:1rem; font-family:'Cinzel',serif; font-weight:700; letter-spacing:0.04em; color:var(--accent-onlight); margin-top:0.5rem; }
+  .price-line{ font-family:'Cinzel', serif; font-size:3.4rem; font-weight:700; color:var(--accent-onlight); margin:1.4rem 0 0.3rem; line-height:1; }
+  .price-line span{ display:block; font-size:1.1rem; font-family:'Cinzel',serif; font-weight:700; letter-spacing:0.04em; color:var(--accent-onlight); margin-top:0.6rem; }
 
   .cta-btn{ position:relative; overflow:hidden; display:inline-block; padding:1em 2.5em;
     background:linear-gradient(135deg, var(--primary-deep), var(--primary-bright)); color:#03110f; text-decoration:none; border-radius:var(--r-pill);
@@ -60,10 +62,10 @@
   .cta-btn:active{ transform:scale(0.96); box-shadow:0 4px 12px rgba(45,212,191,0.24); }
 
   .section{ padding:5.5vh 0; }
-  .section p{ font-size:1.12rem; color:var(--ink); margin:0 0 1.2em; }
+  .section p{ font-size:1.45rem; font-weight:700; color:var(--ink); margin:0 0 1.7em; line-height:1.7; }
   .divider{ text-align:center; color:var(--accent-onlight); letter-spacing:0.5em; margin:1rem 0 3rem; font-size:0.85rem; opacity:0.75; }
 
-  .lede{ font-size:1.3rem; font-style:italic; color:var(--ink); text-align:center; margin-bottom:1.6em; line-height:1.6; }
+  .lede{ font-size:2.3rem; font-weight:900; color:var(--ink); text-align:center; margin-bottom:0.7em; line-height:1.15; letter-spacing:-0.01em; }
 
   .pull-quote{ text-align:center; font-family:'Cinzel',serif; font-size:1.5rem; color:var(--primary-bright); line-height:1.4;
     padding:1.6rem 1.4rem; margin:1.5rem 0; background:var(--glass-bg); border:1px solid var(--glass-border); border-radius:var(--r-lg);
@@ -83,7 +85,14 @@
     -webkit-backdrop-filter:blur(18px) saturate(140%); backdrop-filter:blur(18px) saturate(140%); box-shadow:var(--shadow); }
   .step-card .num{ font-family:'Cinzel', serif; color:var(--teal-bright); font-size:0.72rem; letter-spacing:0.14em; text-transform:uppercase; display:block; margin-bottom:0.4em; }
   .step-card h3{ font-size:1.1rem; margin-bottom:0.4em; color:var(--diamond); }
-  .step-card p{ margin:0; font-size:1rem; color:var(--text-soft); }
+  .step-card p{ margin:0; font-size:1.15rem; font-weight:600; color:var(--text-soft); line-height:1.65; }
+
+  .before-after{ display:flex; align-items:center; justify-content:center; gap:0.6rem; margin-top:1rem; }
+  .ba-item{ flex:1 1 0; max-width:220px; text-align:center; }
+  .ba-photo{ width:100%; aspect-ratio:3/4; border-radius:var(--r-md); overflow:hidden; box-shadow:var(--shadow); border:1px solid var(--border-onlight); }
+  .ba-photo img{ width:100%; height:100%; object-fit:cover; object-position:top center; display:block; }
+  .ba-label{ font-family:'Cinzel',serif; font-weight:700; font-size:0.8rem; letter-spacing:0.14em; text-transform:uppercase; color:var(--ink-soft); margin-top:0.7rem; }
+  .ba-arrow{ flex:0 0 auto; width:44px; }
 
   .proof-card{ margin-top:1.4rem; background:var(--glass-bg); border:1px solid var(--glass-border); border-radius:var(--r-lg);
     padding:0.9rem; -webkit-backdrop-filter:blur(18px) saturate(140%); backdrop-filter:blur(18px) saturate(140%); box-shadow:var(--shadow); }
@@ -92,18 +101,37 @@
 
   .founder-block{ background:var(--glass-bg); border:1px solid var(--glass-border); border-radius:var(--r-lg); padding:2.2rem 2rem;
     -webkit-backdrop-filter:blur(18px) saturate(140%); backdrop-filter:blur(18px) saturate(140%); box-shadow:var(--shadow); }
-  .founder-block li{ font-size:1.05rem; color:var(--text); margin-bottom:1em; padding-left:1.6em; position:relative; }
+  .founder-block li{ font-size:1.2rem; font-weight:600; color:var(--text); margin-bottom:1.2em; padding-left:1.6em; position:relative; line-height:1.6; }
   .founder-block li::before{ content:"◆"; position:absolute; left:0; color:var(--teal-bright); font-size:0.8em; }
   .founder-block ul{ list-style:none; padding:0; margin:0; }
+
+  .value-stack{ background:var(--glass-bg); border:1px solid var(--glass-border); border-radius:var(--r-lg); padding:1.8rem 1.9rem;
+    -webkit-backdrop-filter:blur(18px) saturate(140%); backdrop-filter:blur(18px) saturate(140%); box-shadow:var(--shadow); }
+  .value-row{ display:flex; justify-content:space-between; align-items:baseline; gap:1rem; padding:0.9rem 0; border-bottom:1px solid var(--border); }
+  .value-row:last-of-type{ border-bottom:none; }
+  .value-row .vname{ color:var(--text); font-size:1.02rem; }
+  .value-row .vname strong{ color:var(--diamond); display:block; font-family:'Cinzel',serif; font-size:0.95rem; margin-bottom:0.15em; }
+  .value-row .vprice{ color:var(--silver-bright); font-family:'Cinzel',serif; font-weight:700; white-space:nowrap; }
+  .value-subtotal{ display:flex; justify-content:space-between; padding:1.1rem 0 0.3rem; margin-top:0.4rem; border-top:2px solid var(--glass-border); }
+  .value-subtotal .vname{ font-family:'Cinzel',serif; color:var(--diamond); font-weight:700; letter-spacing:0.03em; }
+  .value-subtotal .vprice{ color:var(--teal-bright); font-family:'Cinzel',serif; font-weight:700; font-size:1.15rem; }
+  .value-total-label{ text-align:center; font-family:'Cinzel',serif; font-size:0.9rem; font-weight:700; letter-spacing:0.14em; text-transform:uppercase; color:var(--silver); margin:2rem 0 0.4rem; }
+  .value-total{ text-align:center; font-family:'Cinzel',serif; font-weight:700; font-size:2.1rem; color:var(--silver); text-decoration:line-through; text-decoration-color:rgba(91,100,112,0.5); margin-bottom:0.3rem; }
 
   .faq-group{ background:var(--glass-bg); border:1px solid var(--glass-border); border-radius:var(--r-lg); overflow:hidden;
     -webkit-backdrop-filter:blur(18px) saturate(140%); backdrop-filter:blur(18px) saturate(140%); box-shadow:var(--shadow); }
   .faq-card{ border-bottom:1px solid var(--border); padding:1.3rem 1.6rem; }
   .faq-card:last-child{ border-bottom:none; }
-  .faq-q{ font-family:'Cinzel', serif; font-size:0.95rem; color:var(--teal-bright); margin-bottom:0.5em; }
-  .faq-a{ font-size:1rem; color:var(--text-soft); margin:0; }
+  .faq-q{ font-family:'Archivo', sans-serif; font-size:1.2rem; font-weight:900; color:var(--primary-bright); margin-bottom:0.5em; letter-spacing:-0.01em; }
+  .faq-a{ font-size:1.1rem; font-weight:600; color:var(--text-soft); margin:0; line-height:1.6; }
 
   .cap-note{ text-align:center; font-family:'Cinzel', serif; font-size:0.85rem; letter-spacing:0.1em; color:var(--accent-onlight); margin-top:2.2rem; }
+
+  .countdown{ display:flex; gap:0.9rem; justify-content:center; margin:1.2rem 0 0.3rem; }
+  .countdown .unit{ text-align:center; min-width:56px; }
+  .countdown .num{ font-family:'Cinzel', serif; font-weight:700; font-size:1.6rem; color:var(--accent-onlight); display:block; line-height:1; }
+  .countdown .lbl{ font-family:'Cinzel', serif; font-size:0.62rem; letter-spacing:0.1em; text-transform:uppercase; color:var(--ink-soft); display:block; margin-top:0.3rem; }
+  .glitter-container .countdown .num, .glitter-container .countdown .lbl{ text-shadow: 0 0 16px rgba(244,232,208,1), 0 0 6px rgba(244,232,208,1); }
 
   .ghost-btn{ display:inline-block; padding:0.95em 2.3em; background:var(--glass-bg); color:var(--teal-bright);
     border:1px solid var(--teal-bright); border-radius:var(--r-pill); font-family:'Cinzel', serif; font-weight:700;
@@ -130,8 +158,14 @@
     <div class="touch-glow"></div>
     <div class="eyebrow">The Magician's Path</div>
     <h1>The Inner Circle.</h1>
-    <p class="sub">Regular, direct access to me. Weekly live calls where we talk through your path. A place to connect with other people who are serious about ascending in this lifetime.</p>
+    <p class="sub">How long have you been doing this alone?</p>
     <div class="founders-tag">Founders — Only 33 Spots</div>
+    <div class="countdown" data-countdown="hero">
+      <div class="unit"><span class="num" data-d>00</span><span class="lbl">Days</span></div>
+      <div class="unit"><span class="num" data-h>00</span><span class="lbl">Hrs</span></div>
+      <div class="unit"><span class="num" data-m>00</span><span class="lbl">Min</span></div>
+      <div class="unit"><span class="num" data-s>00</span><span class="lbl">Sec</span></div>
+    </div>
     <div class="price-line">$88/month</div>
     <a href="https://buy.stripe.com/28E9AT1eO4kU51x7pedAk01" class="cta-btn">Claim a Founding Spot</a>
     <div class="cap-note">Only 33 founding spots available</div>
@@ -139,9 +173,75 @@
 
   <!-- ENTER THE CONVERSATION ALREADY IN THEIR HEAD -->
   <div class="container section">
-    <p class="lede">You're not here because something's broken.</p>
-    <p>You're here because you already know there's more — more to reality than what everyone else calls normal, more available to you than what you've been taught to expect.</p>
-    <p>You've felt it: a synchronicity, a moment of clarity that didn't come from anywhere ordinary. You don't need someone to convince you that's real. You need somewhere to actually go deeper with it — real esoteric knowledge, applied, with people who take it as seriously as you do.</p>
+    <p>Feeling the synchronicities and telling no one, because they'd look at you weird. Editing yourself around people who don't get it — again. Knowing there's more to who you are than the version you show at work, with your family, in the group chat.</p>
+    <p class="lede">That's not nothing. That's you, shrinking.</p>
+    <p>Diminishing the magician into a box, or a weird-case, or a normal average person, so nobody has to deal with the real you.</p>
+    <p>You need somewhere to actually go deeper with it — real esoteric knowledge, applied, with people who take it as seriously as you do.</p>
+  </div>
+
+  <div class="divider">◆ ✧ ◆</div>
+
+  <!-- MULTIPLE PAIN POINTS / ENTRY ANGLES -->
+  <div class="container section">
+    <div class="eyebrow" style="text-align:center; display:block; margin-bottom:1.2rem;">Maybe This Is You</div>
+    <div class="founder-block">
+      <ul>
+        <li>You don't have anyone around you who actually gets it — no real community for this side of you.</li>
+        <li>You had a real spiritual breakthrough, and then didn't know what to actually do with it next.</li>
+        <li>You know you're a star, and you're ready to manifest that shine into your business, your social media, your content.</li>
+        <li>You don't have anyone to go deep with — the esoteric, the real principles, your actual path.</li>
+        <li>You want to heal yourself, and maybe others too, but you don't feel like you have the right tools or the right support yet.</li>
+        <li>You're looking for something to mark the moment — the final shift into your higher timeline.</li>
+        <li>You don't know where to actually find the resources.</li>
+        <li>Nothing else you've found has resonated like this has.</li>
+      </ul>
+    </div>
+  </div>
+
+  <div class="divider">◆ ✧ ◆</div>
+
+  <!-- THE LIE -->
+  <div class="container section">
+    <p class="lede">Stop me if you've heard this one.</p>
+    <p>"You're weird." "You're so funny, what are you even talking about?" "Just follow the safe path." "Be realistic." Or any other thing someone who doesn't want you to shine might say.</p>
+    <p>If keeping your head down and playing it safe actually worked, you wouldn't still be feeling this pull.</p>
+    <p>It's not your fault. You were taught that normal is safe, and the version of you that feels the synchronicities, that wants to go deeper, that knows there's more — that version doesn't fit neatly into a job description. So you learned to keep it quiet. To bring it out only with the right people, in the right amount, so nobody looks at you weird.</p>
+    <p style="font-weight:900; font-size:1.6rem; line-height:1.25;">That's the lie: that shrinking yourself down to fit is the price of a real life. It's not. It's just the price of keeping your own light dimmer.</p>
+  </div>
+
+  <div class="divider">◆ ✧ ◆</div>
+
+  <!-- ORIGIN STORY / CREDIBILITY -->
+  <div class="container section">
+    <div class="eyebrow" style="text-align:center; display:block; margin-bottom:1.2rem;">This Isn't Theory</div>
+    <p class="lede">I lived it.</p>
+    <p>Like you, I started as the fool — the free, unfiltered inner child — until the system got its hands on me. Christian school, detention, an identity as "the problem child" that followed me for years, one I kept rebuilding my life around without even realizing it.</p>
+    <p>I got a biochemistry degree trying to find the science behind the soul. Instead I found the loneliest years of my life — a cold Baltimore apartment, no heat, sleep paralysis and astral entities visiting me at night.</p>
+    <p>I went further — into medical school, chasing a version of healing I thought would finally be enough. It wasn't. The same pattern kept finding me, because I'd never actually cleared the pain, just outrun it.</p>
+    <p>In March 2026, I left. The dark valley lasted about a month. Then I went all in — practicing everything I teach now, on myself, daily. I lost 25 pounds. The depression that had followed me since childhood started lifting. The nightmares stopped. My dreams changed — I started seeing the future, or leaving my body to receive messages I couldn't yet read.</p>
+    <p style="font-weight:900; font-size:1.6rem; line-height:1.25;">That's not a pitch. That's what actually happened when I stopped outrunning it and started doing the work — the same work I teach live, every week, inside the Inner Circle. I don't just host these calls. I live inside this work daily, right alongside you.</p>
+    <div style="text-align:center; margin-top:2rem;">
+      <a href="https://buy.stripe.com/28E9AT1eO4kU51x7pedAk01" class="cta-btn">Claim a Founding Spot</a>
+    </div>
+
+    <div class="before-after">
+      <div class="ba-item">
+        <div class="ba-photo"><img src="before-photo.jpg" alt="Before — 2025"></div>
+        <div class="ba-label">Before</div>
+      </div>
+      <svg class="ba-arrow" viewBox="0 0 60 24" xmlns="http://www.w3.org/2000/svg">
+        <line x1="2" y1="12" x2="46" y2="12" stroke="#c62828" stroke-width="4" stroke-linecap="round"/>
+        <polygon points="44,4 58,12 44,20" fill="#c62828"/>
+      </svg>
+      <div class="ba-item">
+        <div class="ba-photo"><img src="after-photo.jpg" alt="After — August 2026"></div>
+        <div class="ba-label">After</div>
+      </div>
+    </div>
+
+    <div class="proof-card">
+      <img src="ig-growth.jpg" alt="Instagram growth — 2.1M views, +15,308 followers in 60 days">
+    </div>
   </div>
 
   <div class="divider">◆ ✧ ◆</div>
@@ -154,7 +254,12 @@
     <p style="text-align:center; font-family:'Cinzel',serif; font-size:1.05rem; color:var(--accent-onlight); margin-bottom:1.6rem;">
       The people already here are really doing it. Not talking about it. Doing it.
     </p>
-    <p>I host this on Discord — chat rooms, forums, and resource sharing between members, all in one place. Once a week, we go deep together on one real topic: how to actually use your own creative energy as a spiritual tool, the occult tactics a specific artist used to gain their power and image, one of the seven Curses broken down start to finish, real sacred knowledge applied to your own path forward — not locked to one tradition. You ask questions in real time, in the room, and we work through them together.</p>
+    <p style="text-align:center; color:var(--ink-soft); font-weight:700; max-width:32em; margin:0 auto 1.6rem;">
+      Whatever brought you here — the music, the healing, the community, the pull to become a star, symbolism, mysticism — it's all connected by the same esoteric knowledge, the same path of ascension.
+    </p>
+    <p>I host this on Discord — chat rooms, forums, and resource sharing between members, all in one place.</p>
+    <p>Once a week, we go deep together on one real topic: how to actually use your own creative energy as a spiritual tool, the occult tactics a specific artist used to gain their power and image, one of the seven Curses broken down start to finish, real sacred knowledge applied to your own path forward — not locked to one tradition.</p>
+    <p>You ask questions in real time, in the room, and we work through them together.</p>
     <div class="topic-tags">
       <span class="topic-tag">Chinese Medicine</span>
       <span class="topic-tag">Chakras</span>
@@ -168,7 +273,7 @@
       <span class="topic-tag">Undoing Energy Blockages On Your Spirit</span>
       <span class="topic-tag">Healing The Inner Child</span>
     </div>
-    <p style="text-align:center; font-style:italic; color:var(--ink-soft); font-size:1rem; max-width:32em; margin:1.2rem auto 0;">
+    <p style="text-align:center; color:var(--ink-soft); font-weight:700; font-size:1rem; max-width:32em; margin:1.2rem auto 0;">
       All in service of one goal — spiritual ascension. Learning to direct your own life force to create the reality you want, and fully embody the Magician: your higher self, at full capacity.
     </p>
   </div>
@@ -182,8 +287,14 @@
       <div class="step-card">
         <span class="num">One</span>
         <h3>A Live Weekly Call</h3>
-        <p>Every week, one real topic, taught live: how to use your own creative energy as a spiritual tool, the occult tactics a specific artist used to gain their power, one of the seven Curses broken down start to finish, real sacred knowledge applied to your own path — not locked to one tradition. Real questions, answered in the room, not a pre-recorded lecture. Every call is saved after, so missing one live doesn't mean losing it.</p>
+        <p>Every week, one real topic, taught live: how to use your own creative energy as a spiritual tool, the occult tactics a specific artist used to gain their power, one of the seven Curses broken down start to finish, real sacred knowledge applied to your own path — not locked to one tradition.</p>
+        <p style="margin-top:0.9em;">Real questions, answered in the room, not a pre-recorded lecture. Every call is saved after, so missing one live doesn't mean losing it.</p>
       </div>
+    </div>
+    <div class="proof-card">
+      <img src="deepdive-proof.jpg" alt="A live deep dive session inside the Inner Circle">
+    </div>
+    <div class="steps" style="margin-top:1rem;">
       <div class="step-card">
         <span class="num">Two</span>
         <h3>A Real Community</h3>
@@ -191,8 +302,17 @@
       </div>
     </div>
     <div class="proof-card">
-      <img src="community-proof.jpg" alt="A conversation inside the Magi-Path Inner Circle Discord">
-      <p class="proof-caption">A real conversation, inside the actual Discord.</p>
+      <img src="community-proof.jpg" alt="Inside the Magi-Path Inner Circle">
+    </div>
+    <div class="steps" style="margin-top:1rem;">
+      <div class="step-card">
+        <span class="num">Three</span>
+        <h3>A Growing Database</h3>
+        <p>This isn't a course you finish once and forget. Every week, more gets added — session recordings, resource breakdowns, real esoteric knowledge across traditions. It's a library that only grows, and everything you join for, you keep.</p>
+      </div>
+    </div>
+    <div style="text-align:center; margin-top:2rem;">
+      <a href="https://buy.stripe.com/28E9AT1eO4kU51x7pedAk01" class="cta-btn">Claim a Founding Spot</a>
     </div>
   </div>
 
@@ -200,7 +320,8 @@
 
   <!-- WHY IT COSTS WHAT IT COSTS -->
   <div class="container section">
-    <p>I'll be honest with you: this isn't priced for a crowd, and that's not about excluding anyone — it's because real depth only happens in a room small enough that everyone's actually known. This works best with people who are genuinely ready to go deep together, not just watch from a distance.</p>
+    <p>I'll be honest with you: this isn't priced for a crowd, and that's not about excluding anyone — it's because real depth and impact requires personal investment.</p>
+    <p>This is different from the free content too. The community itself is a higher caliber than a general audience. When everyone's actually invested, the knowledge lands differently — and it raises the standard for everyone in the room.</p>
   </div>
 
   <div class="divider">◆ ✧ ◆</div>
@@ -216,6 +337,79 @@
         <li><strong>Immediate access to the private Discord</strong> the moment you join.</li>
       </ul>
     </div>
+  </div>
+
+  <div class="divider">◆ ✧ ◆</div>
+
+  <!-- VALUE STACK -->
+  <div class="container section">
+    <div class="eyebrow" style="text-align:center; display:block; margin-bottom:1.2rem;">Let's Add It Up</div>
+    <div class="value-stack">
+      <div class="value-row">
+        <span class="vname"><strong>A Live Weekly Call</strong>Real sacred knowledge, taught live, every week</span>
+        <span class="vprice">$397/mo</span>
+      </div>
+      <div class="value-row">
+        <span class="vname"><strong>A Real Community</strong>A real Discord, real people, real support</span>
+        <span class="vprice">$197/mo</span>
+      </div>
+      <div class="value-row">
+        <span class="vname"><strong>A Growing Database</strong>Every week, the archive gets bigger — and you keep it</span>
+        <span class="vprice">$286/mo</span>
+      </div>
+      <div class="value-subtotal">
+        <span class="vname">Core Value</span>
+        <span class="vprice">$880/mo</span>
+      </div>
+    </div>
+
+    <p style="text-align:center; font-family:'Cinzel',serif; font-size:0.95rem; color:var(--accent-onlight); margin:2rem 0 1rem;">Plus, As A Founding Member:</p>
+
+    <div class="value-stack">
+      <div class="value-row">
+        <span class="vname"><strong>The Founders Channel</strong>Direct message access to me, always</span>
+        <span class="vprice">$297/mo</span>
+      </div>
+      <div class="value-row">
+        <span class="vname"><strong>Topic Requests</strong>Name what gets covered — and get credited</span>
+        <span class="vprice">$97/mo</span>
+      </div>
+      <div class="value-row">
+        <span class="vname"><strong>Founding Member Status</strong>Permanently marked, never offered again after these 33</span>
+        <span class="vprice">$47/mo</span>
+      </div>
+      <div class="value-subtotal">
+        <span class="vname">Founder Value</span>
+        <span class="vprice">$441/mo</span>
+      </div>
+    </div>
+
+    <p style="text-align:center; font-family:'Cinzel',serif; font-size:0.95rem; color:var(--accent-onlight); margin:2rem 0 1rem;">And The Moment You Say Yes:</p>
+
+    <div class="value-stack">
+      <div class="value-row">
+        <span class="vname"><strong>The Immediate Uplift</strong>The positive vibration of the community itself, the instant spiritual lift that comes with it — ascension and manifestation already in motion before your first call. Just clicking the button starts it.</span>
+        <span class="vprice">Priceless</span>
+      </div>
+    </div>
+
+    <div class="value-total-label">Total Real Value</div>
+    <div class="value-total">$1,321/month</div>
+    <div class="price-line" style="color:var(--accent-onlight);">Your Price: $88/month</div>
+    <div style="text-align:center; margin-top:1.6rem;">
+      <a href="https://buy.stripe.com/28E9AT1eO4kU51x7pedAk01" class="cta-btn">Claim a Founding Spot</a>
+    </div>
+  </div>
+
+  <div class="divider">◆ ✧ ◆</div>
+
+  <!-- DISQUALIFIER -->
+  <div class="container section">
+    <div class="eyebrow" style="text-align:center; display:block; margin-bottom:1.2rem;">This Might Not Be For You</div>
+    <p>I need to be straight with you.</p>
+    <p>If you want to lurk, collect information, and never actually apply any of it — this isn't for you. If you're looking for a guru to fix you while you stay exactly the same — this isn't for you either.</p>
+    <p>The Inner Circle is for people serious about ascending in this lifetime. People who show up, do the work, and actually change. The people already here aren't talking about it. They're doing it.</p>
+    <p style="font-weight:900; font-size:1.6rem; line-height:1.25;">If that's not you yet, that's okay. But if some part of you just felt that, you already know which one you are.</p>
   </div>
 
   <div class="divider">◆ ✧ ◆</div>
@@ -245,25 +439,31 @@
 
   <div class="divider">◆ ✧ ◆</div>
 
+  <!-- BINARY CHOICE -->
+  <div class="container section">
+    <div class="eyebrow" style="text-align:center; display:block; margin-bottom:1.2rem;">Which One Are You Choosing?</div>
+    <p style="text-align:center;">The boxed-in, watered-down version — shrinking, editing themselves down for people who don't get it, waiting for someday.</p>
+    <p style="text-align:center;">Or the magician — fully embodied, in a room full of people who are actually doing it, building this with you.</p>
+    <p class="lede" style="margin-top:1.4rem;">You already know which one you are underneath. The only question left is whether you keep hiding him.</p>
+  </div>
+
+  <div class="divider">◆ ✧ ◆</div>
+
   <!-- CLOSE -->
   <div class="final-cta glitter-container">
     <div class="touch-glow"></div>
     <h2>I Love You.<br>I'll See You On The Inside.</h2>
-    <div class="price-line" style="margin-top:1.6rem;">$88/month</div>
+    <div class="countdown" data-countdown="final" style="margin-top:1.6rem;">
+      <div class="unit"><span class="num" data-d>00</span><span class="lbl">Days</span></div>
+      <div class="unit"><span class="num" data-h>00</span><span class="lbl">Hrs</span></div>
+      <div class="unit"><span class="num" data-m>00</span><span class="lbl">Min</span></div>
+      <div class="unit"><span class="num" data-s>00</span><span class="lbl">Sec</span></div>
+    </div>
+    <div class="price-line" style="margin-top:0.8rem;">$88/month</div>
     <a href="https://buy.stripe.com/28E9AT1eO4kU51x7pedAk01" class="cta-btn" style="margin-top:0.6rem;">Claim a Founding Spot</a>
     <div class="cap-note">Only 33 founding spots available</div>
-    <p style="margin-top:2rem; font-style:italic; color:var(--ink-soft); max-width:32em; margin-left:auto; margin-right:auto;">Founding spots close August 31st. Once they're gone, so is this price, and so is having me directly in your corner — it's just part of being in the room with everyone else here.</p>
-    <p style="margin-top:1.4rem; font-style:italic; color:var(--ink-soft); max-width:32em; margin-left:auto; margin-right:auto;">Thanks for being here.</p>
-  </div>
-
-  <!-- NOT READY YET -->
-  <div class="container section">
-    <div class="eyebrow" style="text-align:center; display:block; margin-bottom:1rem;">Not Ready To Join Yet?</div>
-    <p style="text-align:center;">That's completely okay. Here's a free way to start.</p>
-    <p style="text-align:center;">Tell it who you want to become — not a goal, an identity. It draws eight cards across four steps: your archetype, what's blocking you, the path forward, and who you become. You'll get a personalized reading, plus a free guided meditation to begin that shift today.</p>
-    <div style="text-align:center; margin-top:1.6rem;">
-      <a href="https://themagicianpain.github.io/888App/" target="_blank" rel="noopener noreferrer" class="ghost-btn" style="text-decoration:none;">Try The Free Tarot Read</a>
-    </div>
+    <p style="margin-top:2rem; color:var(--ink-soft); font-weight:700; font-size:1.15rem; max-width:32em; margin-left:auto; margin-right:auto;">Founding spots close August 31st. Once they're gone, so is this price, and so is having me directly in your corner — it's just part of being in the room with everyone else here.</p>
+    <p style="margin-top:1.4rem; color:var(--ink-soft); font-weight:800; font-size:1.3rem; max-width:32em; margin-left:auto; margin-right:auto;">Thanks for being here.</p>
   </div>
 
   <div class="ps">
@@ -314,6 +514,41 @@
     }, { passive:true });
     el.addEventListener('pointerleave', function(){ el.classList.remove('touch-active'); });
   });
+})();
+
+(function(){
+  // Founding spots close September 1, 2026, 12:00 AM Eastern Time
+  var target = new Date('2026-09-01T00:00:00-04:00').getTime();
+
+  function pad(n){ return String(n).padStart(2, '0'); }
+
+  function tick(){
+    var now = Date.now();
+    var diff = target - now;
+    var nodes = document.querySelectorAll('[data-countdown]');
+    if(diff <= 0){
+      nodes.forEach(function(el){
+        el.querySelector('[data-d]').textContent = '00';
+        el.querySelector('[data-h]').textContent = '00';
+        el.querySelector('[data-m]').textContent = '00';
+        el.querySelector('[data-s]').textContent = '00';
+      });
+      return;
+    }
+    var days = Math.floor(diff / 86400000);
+    var hours = Math.floor((diff % 86400000) / 3600000);
+    var mins = Math.floor((diff % 3600000) / 60000);
+    var secs = Math.floor((diff % 60000) / 1000);
+    nodes.forEach(function(el){
+      el.querySelector('[data-d]').textContent = pad(days);
+      el.querySelector('[data-h]').textContent = pad(hours);
+      el.querySelector('[data-m]').textContent = pad(mins);
+      el.querySelector('[data-s]').textContent = pad(secs);
+    });
+  }
+
+  tick();
+  setInterval(tick, 1000);
 })();
 </script>
 
